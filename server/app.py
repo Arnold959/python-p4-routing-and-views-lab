@@ -13,13 +13,12 @@ def print_string (hello):
     print (hello)
     return hello
 
-@app.route('/count/<int:i>')
-def count(i):
-    response = ""
-    for num in range(i + 1):
-        response += str(num) + "\n"
-    return response
-
+@app.route('/count/<int:parameter>')
+def count(parameter):
+    count = ''
+    for num in range(parameter + 1):
+        count += str(num) + '\n'
+    return count
 
         
 @app.route ('/math/<num1><operation><num2>')
